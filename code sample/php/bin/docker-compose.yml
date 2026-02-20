@@ -1,0 +1,9 @@
+services:
+  php:
+    image: php:8.2-cli
+    working_dir: /app
+    volumes:
+      - ../src:/app
+    ports:
+      - "8000:8000"
+    command: php -S 0.0.0.0:8000 router.php
